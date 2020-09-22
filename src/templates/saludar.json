@@ -1,0 +1,14 @@
+{
+    "subject": "Hola {{name}}",
+    "testData": {
+        "name": "Rodrigo",
+        "lista": [
+            {
+                "descripcion": "Item 1"
+            },
+            {
+                "descripcion": "Item 2"
+            }
+        ]
+    }
+}

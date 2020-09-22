@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="{{logoComercio}}"/>
+    <h2>Hola {{nombreCliente}},</h2>
+    <h2>
+        Solo para que estés informado, hemos recibido el pago de tu pedido 
+        en nuestro local de {{nombreComercio}} y ya lo estamos preparando,
+    </h2>
+    <h3>Pedido</h3>
+    <p>Nº de Orden: {{idOrden}}</p>
+    <p>Nº de Transacción: {{idTransaccion}}</p>
+    <p>Fecha de Compra: {{fechaCompra}}</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each detalleOrden}}
+            <tr>
+                <td>
+                    <p>{{nombre}}</p>
+                    <p>{{modificador}}</p>
+                </td>
+                <td>{{cantidad}}</td>
+                <td>{{subTotal}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">SubTotal</td>
+                <td>{{totalOrden.subTotal}}</td>
+            </tr>
+            <tr>
+                <td colspan="2">Envío</td>
+                <td>{{totalOrden.totalDelivery}}</td>
+            </tr>
+            <tr>
+                <td colspan="2">Propina</td>
+                <td>{{totalOrden.propina}}</td>
+            </tr>
+            <tr>
+                <td colspan="2">Total</td>
+                <td>{{totalOrden.total}}</td>
+            </tr>
+        </tfoot>
+    </table>
+    <h3>Dirección de envío</h3>
+    <p>{{direccionEnvio}}</p>
+    <p>¡Gracias por preferirnos!</p>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "templates",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "sync": "node ./src/operations/sync.js",
+    "send": "node ./src/operations/test.js",
+    "delete": "node ./src/operations/delete.js"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.739.0",
+    "nodemon": "^2.0.4",
+    "prompt-sync": "^4.2.0",
+    "readline-sync": "^1.4.10"
+  }
+}
