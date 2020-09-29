@@ -1,0 +1,35 @@
+{
+    "subject": "Confirmación de Pedido #{{idOrden}}",
+    "testData": {
+        "logoComercio": "https://agil.s3.us-east-2.amazonaws.com/img-restaurantes/Starnberg/Logo-Starnberg.jpg",
+        "nombreComercio": "Starnberg",
+        "telefonoSucursal": "+56964537865",
+        "urlSeguimiento": "https://www.starnberg.cl/",
+        "urlComercio": "https://www.starnberg.cl/",
+        "detalleOrden": [
+            {
+                "nombre": "Filete",
+                "modificador": "",
+                "cantidad": 3,
+                "subTotal": "40.500"
+            },
+            {
+                "nombre": "Crudo",
+                "modificador": "Molde Blanco, Preparado",
+                "cantidad": 1,
+                "subTotal": "9.800"
+            }
+        ],
+        "totalOrden": {
+            "subTotal": "50.300",
+            "totalDelivery": "2.500",
+            "propina": "500",
+            "total": "53.300"
+        },
+        "idOrden": "TEST0005",
+        "idTransaccion": "23456543345678765",
+        "fechaCompra": "26-08-2020 16:02:00",
+        "nombreCliente": "Juan Pedrero",
+        "direccionEnvio": "Tobalaba 675, Providencia"
+    }
+}
