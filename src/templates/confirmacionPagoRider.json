@@ -1,0 +1,22 @@
+{
+    "subject": "Confirmación de Pago Agil - Resumen Semana {{numeroSemana}}",
+    "testData": {
+        "numeroSemana": 12,
+        "inicioPeriodo": "26-10-2020",
+        "finPeriodo": "01-11-2020",
+        "totalOferta": 24890,
+        "nombre": "Rodrigo",
+        "apellido": "Ramirez",
+        "idRider": "0021",
+        "totalViajes": 9,
+        "tarifaBase": 14400,
+        "kmsExtra": 490,
+        "bonos": 0,
+        "totalBruto": 14890,
+        "totalAjustes": 0,
+        "totalHonorarios": 1563,
+        "totalNeto": 13327,
+        "totalPropina": 10000,
+        "montoDepositado": 23327
+    }
+}
