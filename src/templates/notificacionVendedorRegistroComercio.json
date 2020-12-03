@@ -1,0 +1,12 @@
+{
+    "subject": "Nuevo comercio en tu perfil",
+    "testData": {
+        "NOMBRECOMERCIO": "Tesla",
+        "TELEFONOUSUARIO": "+56987463572",
+        "CORREOUSUARIO": "tesla@mail.com",
+        "NOMBREUSUARIO": "Dueño Tesla",
+        "URLCOMERCIOADMIN": "https://tesla.com",
+        "NOMBREVENDEDOR": "Richard",
+        "APP_ENV": "dev"
+    }
+}

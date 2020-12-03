@@ -56,7 +56,10 @@ const initTest = async () => {
                 TemplateData: JSON.stringify(jsonConf.testData),
                 ReplyToAddresses: config.TEST_REPLY_TO_EMAIL,
             }
-            await ses.sendTemplatedEmail(params).promise();
+            
+            const sesResponse = await ses.sendTemplatedEmail(params).promise();
+
+            console.log(sesResponse);
         }else{
             console.log(`La plantilla no tiene datos de prueba creados en /templates/${selectedTemplate}.json`)
         }
