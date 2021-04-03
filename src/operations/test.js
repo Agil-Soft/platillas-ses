@@ -20,7 +20,7 @@ console.log("#################################################")
 
 const initTest = async () => {
     try{
-        const templatesResponse = await ses.listTemplates().promise();
+        const templatesResponse = await ses.listTemplates({MaxItems: 100}).promise();
         const templates = templatesResponse.TemplatesMetadata;
         let selectedTemplate = "";
         let isSelectedTemplate= false;

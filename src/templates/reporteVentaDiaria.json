@@ -1,0 +1,17 @@
+{
+    "subject": "💰 Resumen de ventas del día de ayer {{Fecha}} en Ágil",
+    "testData": {
+        "Fecha": "12-01-2021",
+        "FechaEquivalente": "05-01-2021",
+        "ResumenDiario": [
+            {
+                "Sucursal": "Casa China",
+                "CantidadPedidos": 3,
+                "TotalVenta": "52.000",
+                "VentaMTD": "89.500",
+                "CantidadPedidosDiaSemanaAnterior": 4,
+                "TotalVentaDiaSemanaAnterior": "75.000"
+            }
+        ]
+    }
+}

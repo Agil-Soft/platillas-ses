@@ -1,0 +1,14 @@
+{
+    "subject": "¡Bienvenido a Ágil!",
+    "testData": {
+        "NOMBREUSUARIO": "Richard",
+        "URLCOMERCIOADMIN": "https://tesla.com",
+        "NOMBRECOMERCIO": "Tesla",
+        "USERNAME": "mail@ejemplo.cl",
+        "PASSWORD": "17456879-2",
+        "URLCOMERCIO": "https://tesla.com",
+        "NOMBREVENDEDOR": "Jorge",
+        "TELEFONOVENDEDOR": "+5678456372",
+        "APP_ENV": "dev"
+    }
+}

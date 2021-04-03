@@ -21,11 +21,10 @@
             background-color: #F8F8F8;
             width: 100%;
             min-height: 500px;
-            min-width: 520px;
         }
 
         .container {
-            width: 90%;
+            width: 70%;
             padding-right: 20px;
             padding-left: 20px;
             margin-top: 15px;
@@ -47,12 +46,17 @@
         }
 
         .col {
+            -ms-flex-preferred-size: 0;
+            flex-basis: 0;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
             max-width: 100%;
-            margin: 0 auto;
         }
 
         .card {
             position: relative;
+            display: -ms-flexbox;
+            display: flex;
             -ms-flex-direction: column;
             flex-direction: column;
             min-width: 0;
@@ -113,54 +117,42 @@
             </div>
             <div class="row" style="margin-top: 15px;">
                 <div class="col">
-                    <div class="card" style="min-height: 150px; padding: 30px;text-align: center;">
-                        <p style="margin-bottom: 0;">En este periodo generaste</p>
-                        <h1 style="margin: 0; font-size: 38px;color: #00AC6D;">${{montoDeposito}}</h1>
-                        <p style="text-align: left;">
-                            Hola {{nombre}},
-                            <br/>
-                            A continuación te envíamos el detalle de los ingresos prestados de {{nombreComercio}}, {{nombreSucursal}} en el ciclo de facturación del <strong>[{{inicioPeriodo}}]</strong> al <strong>[{{finPeriodo}}]</strong>
+                    <div class="card" style="min-height: 150px; padding: 30px;">
+                        <p>
+                            Hola {{NOMBREUSUARIO}}, ¡Felicitaciones, tu comercio ha sido preaprobado!.
+                            <br>
+                            <br>
+                            Continua configurando tu tienda en el siguiente enlace <a href="{{URLCOMERCIOADMIN}}">Administrador de {{NOMBRECOMERCIO}}</a> haciendo uso de las siguientes credenciales.
+                            <br>
+                            <br>
+                            Usuario: {{USERNAME}}
+                            <br>
+                            Password: {{PASSWORD}}
+                            <br>
+                            <br>
+                            Una vez terminada la carga de la información, podrás comenzar a vender en tu tienda. Puedes ver tu tienda en el siguiente enlace <a href="{{URLCOMERCIO}}">Web de {{NOMBRECOMERCIO}} </a>.
+                            <br>
+                            <br>
+                            Uno de nuestros agentes de venta se contactará a la brevedad contigo.
+                            <br>
+                            Nombre de Vendedor: {{NOMBREVENDEDOR}}
+                            <br>
+                            Teléfono: {{TELEFONOVENDEDOR}}
+                            <br>
+                            <br>
+                            ¡Estamos felices de tenerte en la familia Ágil!
                         </p>
-
-                        
-
-                        <div style="margin-top: 20px; width: 100%;">
-                            <table style="width:430px;font-size:14px; margin: 0 auto;">
-                                <tbody>
-                                    
-                                    <tr>
-                                        <th style="background-color: #A9B1B7;width:262px;color:white;padding: 10px 10px;">Subtotal</th>
-                                        <th style="background-color: #F6F8F8;padding: 10px 20px;">${{subtotal}}</th>
-                                    </tr>
-                                    <tr>
-                                        <th style="background-color: #f52f41;width:262px;color:white;padding: 10px 10px;">Tarifa Medio de Pago</th>
-                                        <th style="background-color: #F6F8F8;padding: 10px 20px;color: #f52f41;">${{feePago}}</th>
-                                    </tr>
-                                    <tr>
-                                        <th style="background-color: #f52f41;width:262px;color:white;padding: 10px 10px;">Tarifa Agil</th>
-                                        <th style="background-color: #F6F8F8;padding: 10px 20px;color: #f52f41;">${{feeAgil}}</th>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <div style="margin-top: 20px; width: 100%;">
-                            <table style="width:430px;font-size:14px; margin: 0 auto;">
-                                <tbody>
-                                    <tr>
-                                        <th style="background-color: #A9B1B7;width:262px;color:white;padding: 10px 10px;">Rut Sucursal</th>
-                                        <th style="background-color: #F6F8F8;padding: 10px 20px;">{{rutSucursal}}</th>
-                                    </tr>
-                                    <tr>
-                                        <th style="background-color: #A9B1B7;width:262px;color:white;padding: 10px 10px;">Nro de Ventas</th>
-                                        <th style="background-color: #F6F8F8;padding: 10px 20px;">{{numeroVentas}}</th>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        
-                        <p style="margin-top: 40px;">¡Gracias por ser parte de la familia Ágil!</p>
                     </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 15px;">
+                <div class="col text-center" style="width: 100%;">
+                    <p>
+                        &nbsp;
+                        <span style="color: white; float:right">
+                            {{APP_ENV}}
+                        </span>
+                    </p>
                 </div>
             </div>
 

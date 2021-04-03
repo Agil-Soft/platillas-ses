@@ -21,11 +21,10 @@
             background-color: #F8F8F8;
             width: 100%;
             min-height: 500px;
-            min-width: 520px;
         }
 
         .container {
-            width: 90%;
+            width: 70%;
             padding-right: 20px;
             padding-left: 20px;
             margin-top: 15px;
@@ -47,14 +46,15 @@
         }
 
         .col {
+            -ms-flex-preferred-size: 0;
+            flex-basis: 0;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
             max-width: 100%;
-            margin: 0 auto;
         }
 
         .card {
             position: relative;
-            -ms-flex-direction: column;
-            flex-direction: column;
             min-width: 0;
             word-wrap: break-word;
             background-color: #fff;
@@ -97,6 +97,29 @@
             font-size: 80%;
             font-weight: 400;
         }
+
+        .table {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .table td, .table th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        .table tr:nth-child(even){background-color: #f2f2f2;}
+
+        .table tr:hover {background-color: #ddd;}
+
+        .table th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: center;
+            background-color: #4CAF50;
+            color: white;
+        }
     </style>
 </head>
 
@@ -113,57 +136,46 @@
             </div>
             <div class="row" style="margin-top: 15px;">
                 <div class="col">
-                    <div class="card" style="min-height: 150px; padding: 30px;text-align: center;">
-                        <p style="margin-bottom: 0;">En este periodo generaste</p>
-                        <h1 style="margin: 0; font-size: 38px;color: #00AC6D;">${{montoDeposito}}</h1>
-                        <p style="text-align: left;">
-                            Hola {{nombre}},
-                            <br/>
-                            A continuación te envíamos el detalle de los ingresos prestados de {{nombreComercio}}, {{nombreSucursal}} en el ciclo de facturación del <strong>[{{inicioPeriodo}}]</strong> al <strong>[{{finPeriodo}}]</strong>
+                    <div class="card" style="min-height: 150px; padding: 30px;">
+                        <p>
+                            Hola, a continuación te enviamos el resumen de ventas del día de ayer.
                         </p>
-
-                        
-
-                        <div style="margin-top: 20px; width: 100%;">
-                            <table style="width:430px;font-size:14px; margin: 0 auto;">
-                                <tbody>
-                                    
-                                    <tr>
-                                        <th style="background-color: #A9B1B7;width:262px;color:white;padding: 10px 10px;">Subtotal</th>
-                                        <th style="background-color: #F6F8F8;padding: 10px 20px;">${{subtotal}}</th>
-                                    </tr>
-                                    <tr>
-                                        <th style="background-color: #f52f41;width:262px;color:white;padding: 10px 10px;">Tarifa Medio de Pago</th>
-                                        <th style="background-color: #F6F8F8;padding: 10px 20px;color: #f52f41;">${{feePago}}</th>
-                                    </tr>
-                                    <tr>
-                                        <th style="background-color: #f52f41;width:262px;color:white;padding: 10px 10px;">Tarifa Agil</th>
-                                        <th style="background-color: #F6F8F8;padding: 10px 20px;color: #f52f41;">${{feeAgil}}</th>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <div style="margin-top: 20px; width: 100%;">
-                            <table style="width:430px;font-size:14px; margin: 0 auto;">
-                                <tbody>
-                                    <tr>
-                                        <th style="background-color: #A9B1B7;width:262px;color:white;padding: 10px 10px;">Rut Sucursal</th>
-                                        <th style="background-color: #F6F8F8;padding: 10px 20px;">{{rutSucursal}}</th>
-                                    </tr>
-                                    <tr>
-                                        <th style="background-color: #A9B1B7;width:262px;color:white;padding: 10px 10px;">Nro de Ventas</th>
-                                        <th style="background-color: #F6F8F8;padding: 10px 20px;">{{numeroVentas}}</th>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        
-                        <p style="margin-top: 40px;">¡Gracias por ser parte de la familia Ágil!</p>
+                        <br>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th colspan="3">{{Fecha}}</th>
+                                    <th colspan="3">{{FechaEquivalente}}</th>
+                                </tr>
+                                <tr>
+                                    <th>Sucursal</th>
+                                    <th>Cantidad Pedidos</th>
+                                    <th>Total Venta</th>
+                                    <th>Acumulado MTD</th>
+                                    <th>Cantidad Pedidos</th>
+                                    <th>Total Venta</th>
+                                    <th>Diff %</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each ResumenDiario}}
+                                <tr>
+                                    <td>{{Sucursal}}</td>
+                                    <td>{{CantidadPedidos}}</td>
+                                    <td>${{TotalVenta}}</td>
+                                    <td>${{VentaMTD}}</td>
+                                    <td>{{CantidadPedidosDiaSemanaAnterior}}</td>
+                                    <td>${{TotalVentaDiaSemanaAnterior}}</td>
+                                    <td>{{PorcentajeDiferencia}}%</td>
+                                </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+    
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 
