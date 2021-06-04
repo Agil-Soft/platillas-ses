@@ -1,0 +1,10 @@
+{
+    "subject": "Tu pedido en {{nombreSucursal}} del {{fecha}}",
+    "testData": {
+        "urlLogo": "https://agil.s3.amazonaws.com/comercio-qa/3/diseno/Logo.png?1603631845",
+        "urlEnlace": "https://delivery.jeronimochile.cl/pedir",
+        "nombreCliente": "Rodrigo",
+        "fecha": "viernes por la tarde",
+        "nombreSucursal": "Jeronimo Chile"
+    }
+}
