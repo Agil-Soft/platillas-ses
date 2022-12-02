@@ -1,0 +1,10 @@
+{
+    "subject": "La GeoZona fue actualizada",
+    "testData": {
+        "NOMBRESUCURSAL": "Sucursal 1",
+        "NOMBRECOMERCIO": "Comercio prueba",
+        "HORA_ACTUALIZACION": "Hoy a las 15:30",
+        "PATH": "",
+        "API_KEY_MAPS": "123"
+    }
+}

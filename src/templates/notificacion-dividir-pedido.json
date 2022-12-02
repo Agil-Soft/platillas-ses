@@ -1,0 +1,15 @@
+{
+    "subject": "Nuevo Pedido",
+    "testData": {
+        "COMERCIO_LOGO": "https://agil.s3.us-east-2.amazonaws.com/img-restaurantes/Starnberg/Logo-Starnberg.jpg",
+        "CLIENTE_NOMBRE": "Carlos Bonomelli",
+        "PEDIDO_CODIGO": "#Pasdasd",
+        "COMENTARIO": "Hola comentario",
+        "CLIENTE_DIRECCION_ENVIO": "av Apoquindo 6314",
+        "SUCURSAL_TELEFONO": "+56911223456",
+        "PEDIDO_FECHA": "11-11-2022 15:30",
+        "URL_SEGUIMIENTO": "https://google.cl",
+        "SHOP_URL": "https://google.cl",
+        "COMERCIO_NOMBRE": "Comercio prueba"
+    }
+}

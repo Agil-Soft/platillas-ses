@@ -1,0 +1,10 @@
+{
+    "subject": "Ordenes programadas para hoy",
+    "testData": {
+        "HOY": "20-12-2022",
+        "CANTIDAD": "4",
+        "NOMBRESUCURSAL": "Sucursal 1",
+        "NOMBRECOMERCIO": "Comercio prueba",
+        "APP_ENV": "dev"
+    }
+}
