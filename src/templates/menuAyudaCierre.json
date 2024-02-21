@@ -7,7 +7,6 @@
     "estado": "Finalizado",
     "comercio": "Gregoria",
     "logo": "https://agil.s3.us-east-2.amazonaws.com/Logos/Logo_Agil_Horizontal.png",
-    "respuesta": "<h1>que wa</h1>",
-    "APP_ENV": "dev"
+    "respuesta": "<h1>que wa</h1>"
   }
 }
