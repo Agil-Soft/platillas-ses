@@ -9,7 +9,7 @@
     "delete": "node ./src/operations/delete.js"
   },
   "dependencies": {
-    "aws-sdk": "^2.739.0",
+    "aws-sdk": "^2.1692.0",
     "nodemon": "^2.0.4",
     "prompt-sync": "^4.2.0",
     "readline-sync": "^1.4.10"
