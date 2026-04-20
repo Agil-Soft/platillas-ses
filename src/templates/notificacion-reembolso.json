@@ -2,14 +2,14 @@
     "subject": "¡Tu Reembolso en {{COMERCIO_NOMBRE}}",
     "testData": {
         "COMERCIO_NOMBRE": "Comercio prueba",
-        "COMERCIO_LOGO": "https://agil.s3.us-east-2.amazonaws.com/img-restaurantes/Starnberg/Logo-Starnberg.jpg",
+        "COMERCIO_LOGO": "https://agil-ohio.s3.us-east-2.amazonaws.com/img-restaurantes/Starnberg/Logo-Starnberg.jpg",
         "USUARIO_NOMBRE": "Carlos Bonomelli",
         "REEMBOLSO_MONTO": "$1.000",
         "PEDIDO_CODIGO": "#Psdsaas-0",
         "PEDIDO_FECHA": "2 de noviembre a las 15:30",
         "MEDIO_PAGO_NOMBRE": "Fpay",
         "OBSERVACION_CLIENTE": "askldkslkdas hola",
-        "MEDIO_PAGO_LOGO": "https://agil.s3.us-east-2.amazonaws.com/Logos/Fpay_Logo.png",
+        "MEDIO_PAGO_LOGO": "https://agil-ohio.s3.us-east-2.amazonaws.com/Logos/Fpay_Logo.png",
         "APP_ENV": "dev"
     }
 }

@@ -5,8 +5,6 @@ const config = require('../config')
 
   
 AWS.config.update({
-    accessKeyId: config.AWS_KEY_ID,
-    secretAccessKey: config.AWS_SECRET_ID,
     region: config.AWS_REGION,
 })
 
@@ -21,38 +19,7 @@ console.log("#################################################")
 const filesSearch = fs.readdirSync("./src/templates");
 const files = filesSearch.filter((file) => file.split('.')[1] === "html");
 
-let selectedFile = "";
-let isSelectedFile = false;
-
-while(!isSelectedFile){
-    console.log("\nElija una de las siguientes plantillas");
-    files.forEach((file, key) => {
-        console.log(`${key+1}) ${file}`)
-    })
-    var selectedOption = readlineSync.questionInt("Opción : \n")
-
-    if(selectedOption === "" || selectedOption > files.length){
-        console.log("Opción elegida no existe")
-    }else{
-        isSelectedFile = true;
-        selectedFile = files[selectedOption-1];
-    }
-}
-
-
-
-const file = fs.readFileSync(`./src/templates/${selectedFile}`);
-const templateName = selectedFile.replace(" ", "").split(".")[0];
-const jsonConf = require(`../templates/${templateName}.json`);
-console.log(`Configurando Plantilla ${templateName}`);
-
-const params = {
-    Template : {
-        TemplateName : templateName,
-        SubjectPart: jsonConf.subject,
-        HtmlPart: file.toString(),
-    }
-}
+const isAllMode = process.argv.includes("--all");
 
 const createOrUpdateTemplate = async (params) => {
     let searchTemplate = null;
@@ -76,5 +43,67 @@ const createOrUpdateTemplate = async (params) => {
     }
 }
 
-createOrUpdateTemplate(params);
+const buildTemplateParams = (fileName) => {
+    const file = fs.readFileSync(`./src/templates/${fileName}`);
+    const templateName = fileName.replace(" ", "").split(".")[0];
+    const jsonConf = require(`../templates/${templateName}.json`);
+
+    return {
+        Template : {
+            TemplateName : templateName,
+            SubjectPart: jsonConf.subject,
+            HtmlPart: file.toString(),
+        }
+    };
+};
+
+const selectTemplateFile = () => {
+    let selectedFile = "";
+    let isSelectedFile = false;
+
+    while(!isSelectedFile){
+        console.log("\nElija una de las siguientes plantillas");
+        files.forEach((file, key) => {
+            console.log(`${key+1}) ${file}`)
+        })
+        const selectedOption = readlineSync.questionInt("Opción : \n")
+
+        if(selectedOption === "" || selectedOption > files.length){
+            console.log("Opción elegida no existe")
+        }else{
+            isSelectedFile = true;
+            selectedFile = files[selectedOption-1];
+        }
+    }
+
+    return selectedFile;
+};
+
+const syncAllTemplates = async () => {
+    console.log(`Modo --all: sincronizando ${files.length} plantillas`);
+
+    for (const fileName of files) {
+        const templateName = fileName.replace(" ", "").split(".")[0];
+        console.log(`\nConfigurando Plantilla ${templateName}`);
+        const params = buildTemplateParams(fileName);
+        await createOrUpdateTemplate(params);
+    }
+
+    console.log("\nSincronización masiva finalizada");
+};
+
+const main = async () => {
+    if (isAllMode) {
+        await syncAllTemplates();
+        return;
+    }
+
+    const selectedFile = selectTemplateFile();
+    const templateName = selectedFile.replace(" ", "").split(".")[0];
+    console.log(`Configurando Plantilla ${templateName}`);
+    const params = buildTemplateParams(selectedFile);
+    await createOrUpdateTemplate(params);
+};
+
+main();
 

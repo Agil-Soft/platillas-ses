@@ -1,7 +1,7 @@
 {
     "subject": "¡Has Conseguido un Cupon !",
     "testData": {
-        "LOGO": "https://agil.s3.us-east-2.amazonaws.com/img-restaurantes/Starnberg/Logo-Starnberg.jpg",
+        "LOGO": "https://agil-ohio.s3.us-east-2.amazonaws.com/img-restaurantes/Starnberg/Logo-Starnberg.jpg",
         "CUPON_CODIGO": "HOLA123",
         "CUPON_TIPO_VALOR": "% DESC Subtotal",
         "VALOR": "$1.000",

@@ -1,7 +1,7 @@
 {
     "subject": "Confirmación de Pedido #{{idOrden}}",
     "testData": {
-        "urlLogo": "https://agil.s3.amazonaws.com/comercio-qa/3/diseno/Logo.png?1603631845",
+        "urlLogo": "https://agil-ohio.s3.amazonaws.com/comercio-qa/3/diseno/Logo.png?1603631845",
         "urlEnlace": "https://delivery.jeronimochile.cl/pedir",
         "nombreCliente": "Carlos",
         "nombreSucursal": "Jeronimo Chile",
