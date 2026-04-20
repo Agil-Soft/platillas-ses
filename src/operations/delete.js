@@ -3,8 +3,6 @@ const config = require('../config')
 const readlineSync = require('readline-sync');
 
 AWS.config.update({
-    accessKeyId: config.AWS_KEY_ID,
-    secretAccessKey: config.AWS_SECRET_ID,
     region: config.AWS_REGION,
 })
 

@@ -6,7 +6,6 @@
         "telefonoSucursal": "+56964537865",
         "urlSeguimiento": "https://www.starnberg.cl/",
         "urlComercio": "https://www.starnberg.cl/",
-        "cuotaServicioAgil": "1.500",
         "detalleOrden": [
             {
                 "nombre": "Filete",
@@ -25,7 +24,6 @@
             "subTotal": "50.300",
             "totalDelivery": "2.500",
             "propina": "500",
-            "TotalDscto": "2.403",
             "total": "53.300"
         },
         "idOrden": "TEST0005",

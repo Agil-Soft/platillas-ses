@@ -1,12 +1,12 @@
 {
     "subject": "¡Bienvenido!",
     "testData": {
-        "LOGO": "https://agil.s3.us-east-2.amazonaws.com/img-restaurantes/Starnberg/Logo-Starnberg.jpg",
+        "LOGO": "https://agil-ohio.s3.us-east-2.amazonaws.com/img-restaurantes/Starnberg/Logo-Starnberg.jpg",
         "USUARIO_NOMBRE": "Carlos Bonomelli",
         "HORA": "15:30",
         "PERFIL_NOMBRE": "Carlos Bonomelli",
         "PERFIL_OBJETIVO": "Sucursal 1",
-        "HREF": "https://agil.s3.us-east-2.amazonaws.com/Logos/Fpay_Logo.png",
+        "HREF": "https://agil-ohio.s3.us-east-2.amazonaws.com/Logos/Fpay_Logo.png",
         "USERNAME": "Carlos",
         "PASSWORD": "1234",
         "APP_ENV": "dev"

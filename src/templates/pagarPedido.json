@@ -1,7 +1,7 @@
 {
     "subject": "Finaliza el pago de tu Pedido #{{idOrden}}",
     "testData": {
-        "logoComercio": "https://agil.s3.us-east-2.amazonaws.com/img-restaurantes/Starnberg/Logo-Starnberg.jpg",
+        "logoComercio": "https://agil-ohio.s3.us-east-2.amazonaws.com/img-restaurantes/Starnberg/Logo-Starnberg.jpg",
         "nombreComercio": "Starnberg",
         "telefonoSucursal": "+56964537865",
         "urlPago": "https://pide.devagil.com/pay?id=53616c7465645f5f349750b7552b9d93116f3eebcb445ee8418fe2d97ce1d6d6",

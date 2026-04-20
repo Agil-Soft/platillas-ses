@@ -2,7 +2,7 @@
     "subject": "Desafio Completado",
     "testData": {
         "COMERCIO_NOMBRE": "Comercio prueba",
-        "LOGO": "https://agil.s3.us-east-2.amazonaws.com/img-restaurantes/Starnberg/Logo-Starnberg.jpg",
+        "LOGO": "https://agil-ohio.s3.us-east-2.amazonaws.com/img-restaurantes/Starnberg/Logo-Starnberg.jpg",
         "SUCURSAL_TITULO": "Sucursal 1",
         "DESAFIO_NOMBRE": "Desafio 1",
         "APP_ENV": "dev"

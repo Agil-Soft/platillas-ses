@@ -1,7 +1,7 @@
 {
     "subject": "Confirmación de Pedido #{{idOrden}}",
     "testData": {
-        "logoComercio": "https://agil.s3.us-east-2.amazonaws.com/img-restaurantes/Starnberg/Logo-Starnberg.jpg",
+        "logoComercio": "https://agil-ohio.s3.us-east-2.amazonaws.com/img-restaurantes/Starnberg/Logo-Starnberg.jpg",
         "nombreComercio": "Starnberg",
         "telefonoSucursal": "+56964537865",
         "urlSeguimiento": "https://www.starnberg.cl/",
