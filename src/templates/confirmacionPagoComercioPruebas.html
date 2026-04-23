@@ -477,7 +477,7 @@
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
       <tr>
         <td align="right" style="font-size:11px; color:rgba(255,255,255,0.7); letter-spacing:0.5px;">
-          {{periodo}}
+          Semana del {{inicioPeriodo}} al {{finPeriodo}}
         </td>
       </tr>
     </table>
@@ -497,7 +497,7 @@
         </td>
         <td align="right" valign="middle">
           <div class="badge">📊 Informe Semanal</div>
-          <div class="period" style="padding-top:4px; word-break:break-word;">{{comercio}}</div>
+          <div class="period" style="padding-top:4px; word-break:break-word;">{{nombreComercio}}</div>
         </td>
       </tr>
     </table>
@@ -508,14 +508,14 @@
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; position:relative; z-index:1;">
       <tr>
         <td align="center">
-          <div class="hero-greeting">Hola {{encargado}},</div>
-          <div class="hero-name" style="word-break:break-word;">{{comercio}}: <span style="font-weight:400; opacity:0.85;">{{sucursal}}</span> 👋</div>
-          <div class="hero-label" style="word-break:break-word;">CICLO DE FACTURACIÓN: {{periodo}}</div>
-          <div class="hero-amount" style="font-size:44px; word-break:break-word;">${{montodeposito}}</div>
+          <div class="hero-greeting">Hola {{nombre}},</div>
+          <div class="hero-name" style="word-break:break-word;">{{nombreComercio}}: <span style="font-weight:400; opacity:0.85;">{{nombreSucursal}}</span> 👋</div>
+          <div class="hero-label" style="word-break:break-word;">CICLO DE FACTURACIÓN: {{inicioPeriodo}} – {{finPeriodo}}</div>
+          <div class="hero-amount" style="font-size:44px; word-break:break-word;">${{montoDeposito}}</div>
           <table role="presentation" cellpadding="0" cellspacing="0" style="border-collapse:collapse; margin:0 auto;">
             <tr>
               <td style="background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.25); color:#fff; font-size:13px; font-weight:600; padding:7px 16px; border-radius:100px; word-break:break-word;">
-                Semana anterior: {{porcentajecrecimiento}}
+                {{variacionSemanalTexto}}
               </td>
             </tr>
           </table>
@@ -530,15 +530,15 @@
       <tr>
         <td style="border:1px solid #e8ecf0; border-radius:12px; padding:18px 20px; background:#fafafa; text-align:center;">
           <div style="font-size:11px; color:#9ca3af; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:8px; font-weight:500;">Órdenes</div>
-          <div style="font-size:20px; font-weight:700; color:#1a1a2e; line-height:1.2; word-break:break-word;">{{totalventas}}</div>
+          <div style="font-size:20px; font-weight:700; color:#1a1a2e; line-height:1.2; word-break:break-word;">{{numeroVentas}}</div>
         </td>
         <td style="border:1px solid #e8ecf0; border-radius:12px; padding:18px 20px; background:#fafafa; text-align:center;">
           <div style="font-size:11px; color:#9ca3af; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:8px; font-weight:500;">Ticket prom.</div>
-          <div style="font-size:20px; font-weight:700; color:#1a1a2e; line-height:1.2; word-break:break-word;">${{ticketpromedio}}</div>
+          <div style="font-size:20px; font-weight:700; color:#1a1a2e; line-height:1.2; word-break:break-word;">${{ticketPromedio}}</div>
         </td>
         <td style="border:1px solid #e8ecf0; border-radius:12px; padding:18px 20px; background:#fafafa; text-align:center;">
-          <div style="font-size:11px; color:#9ca3af; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:8px; font-weight:500;">Variación</div>
-          <div style="font-size:20px; font-weight:700; color:#1a1a2e; line-height:1.2; word-break:break-word;">{{porcentajecrecimiento}}</div>
+          <div style="font-size:11px; color:#9ca3af; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:8px; font-weight:500;">Aceptación</div>
+          <div style="font-size:20px; font-weight:700; color:#1a1a2e; line-height:1.2; word-break:break-word;">{{tasaAceptacion}}%</div>
         </td>
       </tr>
     </table>
@@ -567,7 +567,7 @@
         <td style="padding:12px 16px; font-size:14px; color:#6b7280;">
           <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#ef4444; margin-right:10px; vertical-align:middle;"></span>Fee Ecommerce
         </td>
-        <td align="right" style="padding:12px 16px; font-size:15px; font-weight:600; color:#ef4444;">– ${{comisionventa}}</td>
+        <td align="right" style="padding:12px 16px; font-size:15px; font-weight:600; color:#ef4444;">– ${{feeEcommerce}}</td>
       </tr>
     </table>
 
@@ -576,7 +576,7 @@
         <td style="padding:12px 16px; font-size:14px; color:#6b7280;">
           <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#f97316; margin-right:10px; vertical-align:middle;"></span>Fee Delivery
         </td>
-        <td align="right" style="padding:12px 16px; font-size:15px; font-weight:600; color:#ef4444;">– ${{comisiondelivery}}</td>
+        <td align="right" style="padding:12px 16px; font-size:15px; font-weight:600; color:#ef4444;">– ${{feeDelivery}}</td>
       </tr>
     </table>
 
@@ -588,7 +588,7 @@
         <td style="padding:12px 16px; font-size:14px; color:#6b7280;">
           <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#eab308; margin-right:10px; vertical-align:middle;"></span>Cuota Pasarela
         </td>
-        <td align="right" style="padding:12px 16px; font-size:15px; font-weight:600; color:#ef4444;">– ${{cuotapasarela}}</td>
+        <td align="right" style="padding:12px 16px; font-size:15px; font-weight:600; color:#ef4444;">– ${{cuotaPasarela}}</td>
       </tr>
     </table>
 
@@ -606,7 +606,7 @@
         <td style="padding:12px 16px; font-size:14px; color:#6b7280;">
           <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#dc2626; margin-right:10px; vertical-align:middle;"></span>Cargos
         </td>
-        <td align="right" style="padding:12px 16px; font-size:15px; font-weight:600; color:#ef4444;">– ${{comisionpago}}</td>
+        <td align="right" style="padding:12px 16px; font-size:15px; font-weight:600; color:#ef4444;">– ${{feePago}}</td>
       </tr>
     </table>
 
@@ -627,7 +627,7 @@
         <td style="padding:12px 16px; font-size:15px; font-weight:700; color:#1d4ed8;">
           <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#2563eb; margin-right:10px; vertical-align:middle;"></span>= Depósito Comercio
         </td>
-        <td align="right" style="padding:12px 16px; font-size:20px; font-weight:700; color:#2563eb;">${{montodeposito}}</td>
+        <td align="right" style="padding:12px 16px; font-size:20px; font-weight:700; color:#2563eb;">${{montoDeposito}}</td>
       </tr>
     </table>
 
@@ -650,7 +650,7 @@
     <div class="section-label">Ventas por día</div>
     <div style="text-align:right; margin-bottom:12px; margin-top:-8px;">
       <div style="font-size:10px; color:#9ca3af; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:2px;">Total</div>
-      <div style="font-size:18px; font-weight:700; color:#1a1a2e;">${{subtotal}}</div>
+      <div style="font-size:18px; font-weight:700; color:#1a1a2e;">$1.153.410</div>
     </div>
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:separate; border-spacing:0 10px;">
       <tr>
@@ -662,7 +662,7 @@
             </table>
           </div>
         </td>
-        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">${{ventalunes}}</td>
+        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">$175.200</td>
       </tr>
       <tr>
         <td style="width:72px; font-size:13px; color:#6b7280;">Martes</td>
@@ -673,7 +673,7 @@
             </table>
           </div>
         </td>
-        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">${{ventamartes}}</td>
+        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">$128.500</td>
       </tr>
       <tr>
         <td style="width:72px; font-size:13px; color:#6b7280;">Miércoles</td>
@@ -684,7 +684,7 @@
             </table>
           </div>
         </td>
-        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">${{ventamiercoles}}</td>
+        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">$207.800</td>
       </tr>
       <tr>
         <td style="width:72px; font-size:13px; color:#6b7280;">Jueves</td>
@@ -695,7 +695,7 @@
             </table>
           </div>
         </td>
-        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">${{ventajueves}}</td>
+        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">$154.100</td>
       </tr>
       <tr>
         <td colspan="3" style="background:#fff5f5; border-radius:10px; padding:6px 10px;">
@@ -709,7 +709,7 @@
                   </table>
                 </div>
               </td>
-              <td style="width:82px; text-align:right; font-size:13px; font-weight:700; color:#e8192c;">${{ventaviernes}}</td>
+              <td style="width:82px; text-align:right; font-size:13px; font-weight:700; color:#e8192c;">$272.400</td>
             </tr>
           </table>
         </td>
@@ -723,7 +723,7 @@
             </table>
           </div>
         </td>
-        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">${{ventasabado}}</td>
+        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">$215.410</td>
       </tr>
       <tr>
         <td style="width:72px; font-size:13px; color:#6b7280;">Domingo</td>
@@ -734,7 +734,7 @@
             </table>
           </div>
         </td>
-        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">${{ventadomingo}}</td>
+        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">$0</td>
       </tr>
     </table>
   </div>
@@ -752,7 +752,7 @@
             </table>
           </div>
         </td>
-        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">{{cookinglunes}}</td>
+        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">27 min</td>
       </tr>
       <tr>
         <td style="width:72px; font-size:13px; color:#6b7280;">Martes</td>
@@ -763,7 +763,7 @@
             </table>
           </div>
         </td>
-        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">{{cookingmartes}}</td>
+        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">22 min</td>
       </tr>
       <tr>
         <td style="width:72px; font-size:13px; color:#6b7280;">Miércoles</td>
@@ -774,7 +774,7 @@
             </table>
           </div>
         </td>
-        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">{{cookingmiercoles}}</td>
+        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">29 min</td>
       </tr>
       <tr>
         <td style="width:72px; font-size:13px; color:#6b7280;">Jueves</td>
@@ -785,7 +785,7 @@
             </table>
           </div>
         </td>
-        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">{{cookingjueves}}</td>
+        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">25 min</td>
       </tr>
       <tr>
         <td colspan="3" style="background:#fffbeb; border-radius:10px; padding:6px 10px;">
@@ -799,7 +799,7 @@
                   </table>
                 </div>
               </td>
-              <td style="width:82px; text-align:right; font-size:13px; font-weight:700; color:#d97706;">{{cookingviernes}}</td>
+              <td style="width:82px; text-align:right; font-size:13px; font-weight:700; color:#d97706;">45 min</td>
             </tr>
           </table>
         </td>
@@ -813,7 +813,7 @@
             </table>
           </div>
         </td>
-        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">{{cookingsabado}}</td>
+        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">32 min</td>
       </tr>
       <tr>
         <td style="width:72px; font-size:13px; color:#6b7280;">Domingo</td>
@@ -824,7 +824,7 @@
             </table>
           </div>
         </td>
-        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#9ca3af;">{{cookingdomingo}}</td>
+        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#9ca3af;">- min</td>
       </tr>
     </table>
 
@@ -839,7 +839,6 @@
   <div class="cta-section">
     <div class="cta-title">¿Quieres ver el detalle completo?</div>
     <div class="cta-sub">Accede a tu panel para ver transacciones, reportes y más</div>
-    <a class="cta-button" href="https://partner.getagil.com/orders">Ir a mi cuenta</a>
   </div>
 
   <!-- FOOTER -->
