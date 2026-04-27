@@ -172,9 +172,6 @@
       border-radius: 100px;
       position: relative;
       z-index: 1;
-      max-width: 100%;
-      white-space: normal;
-      word-break: break-word;
     }
 
     /* ── QUICK STATS ── */
@@ -423,13 +420,14 @@
 
     .cta-button {
       display: inline-block;
-      background: #e8192c;
-      color: #fff;
+      background: #ffffff;
+      color: #1a1a2e;
       font-size: 14px;
       font-weight: 600;
       padding: 14px 36px;
       border-radius: 12px;
       text-decoration: none;
+      border: 1px solid #e5e7eb;
     }
 
     /* ── FOOTER ── */
@@ -456,17 +454,6 @@
       margin-bottom: 14px;
     }
 
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .footer-links a {
-      font-size: 11px;
-      color: #9ca3af;
-      text-decoration: none;
-    }
   </style>
 </head>
 <body>
@@ -511,14 +498,8 @@
           <div class="hero-greeting">Hola {{encargado}},</div>
           <div class="hero-name" style="word-break:break-word;">{{comercio}}: <span style="font-weight:400; opacity:0.85;">{{sucursal}}</span> 👋</div>
           <div class="hero-label" style="word-break:break-word;">CICLO DE FACTURACIÓN: {{periodo}}</div>
-          <div class="hero-amount" style="font-size:44px; word-break:break-word;">${{montodeposito}}</div>
-          <table role="presentation" cellpadding="0" cellspacing="0" style="border-collapse:collapse; margin:0 auto;">
-            <tr>
-              <td style="background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.25); color:#fff; font-size:13px; font-weight:600; padding:7px 16px; border-radius:100px; word-break:break-word;">
-                Crecimiento: {{crecimiento}}
-              </td>
-            </tr>
-          </table>
+          <div class="hero-amount" style="font-size:44px; word-break:break-word;">{{montodeposito}}</div>
+          <div class="hero-change-pill">▲ +{{crecimiento}} respecto a la semana anterior</div>
         </td>
       </tr>
     </table>
@@ -534,7 +515,7 @@
         </td>
         <td style="border:1px solid #e8ecf0; border-radius:12px; padding:18px 20px; background:#fafafa; text-align:center;">
           <div style="font-size:11px; color:#9ca3af; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:8px; font-weight:500;">Ticket prom.</div>
-          <div style="font-size:20px; font-weight:700; color:#1a1a2e; line-height:1.2; word-break:break-word;">${{ticketpromedio}}</div>
+          <div style="font-size:20px; font-weight:700; color:#1a1a2e; line-height:1.2; word-break:break-word;">{{ticketpromedio}}</div>
         </td>
         <td style="border:1px solid #e8ecf0; border-radius:12px; padding:18px 20px; background:#fafafa; text-align:center;">
           <div style="font-size:11px; color:#9ca3af; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:8px; font-weight:500;">Aceptación</div>
@@ -549,12 +530,12 @@
     <div class="section-label">Desglose de ingresos</div>
 
     <!-- Ventas subtotal -->
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; background:#f9fafb; border-radius:10px; margin-bottom:6px;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:separate; border-spacing:0; background:#f9fafb; border-radius:10px; margin-bottom:6px;">
       <tr>
         <td style="padding:12px 16px; font-size:14px; color:#6b7280;">
-          <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#6b7280; margin-right:10px; vertical-align:middle;"></span>Ventas
+          <span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#6b7280; margin-right:10px; vertical-align:middle;"></span>Ventas
         </td>
-        <td align="right" style="padding:12px 16px; font-size:15px; font-weight:600; color:#374151;">${{subtotal}}</td>
+        <td align="right" style="padding:12px 16px; font-size:15px; font-weight:600; color:#374151;">{{subtotal}}</td>
       </tr>
     </table>
 
@@ -562,72 +543,72 @@
     <!-- Tarifas Ágil -->
     <div style="font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:1px; color:#e8192c; margin: 6px 4px 4px;">Tarifas Ágil</div>
 
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; background:#fff5f5; border-radius:10px; margin-bottom:6px;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:separate; border-spacing:0; background:#fff5f5; border-radius:10px; margin-bottom:6px;">
       <tr>
         <td style="padding:12px 16px; font-size:14px; color:#6b7280;">
-          <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#ef4444; margin-right:10px; vertical-align:middle;"></span>Fee Ecommerce
+          <span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#ef4444; margin-right:10px; vertical-align:middle;"></span>Fee Ecommerce
         </td>
-        <td align="right" style="padding:12px 16px; font-size:15px; font-weight:600; color:#ef4444;">– ${{comisionventa}}</td>
+        <td align="right" style="padding:12px 16px; font-size:15px; font-weight:600; color:#ef4444;">– {{comisionventa}}</td>
       </tr>
     </table>
 
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; background:#fff5f5; border-radius:10px; margin-bottom:6px;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:separate; border-spacing:0; background:#fff5f5; border-radius:10px; margin-bottom:6px;">
       <tr>
         <td style="padding:12px 16px; font-size:14px; color:#6b7280;">
-          <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#f97316; margin-right:10px; vertical-align:middle;"></span>Fee Delivery
+          <span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#f97316; margin-right:10px; vertical-align:middle;"></span>Fee Delivery
         </td>
-        <td align="right" style="padding:12px 16px; font-size:15px; font-weight:600; color:#ef4444;">– ${{comisiondelivery}}</td>
+        <td align="right" style="padding:12px 16px; font-size:15px; font-weight:600; color:#ef4444;">– {{comisiondelivery}}</td>
       </tr>
     </table>
 
     <!-- Costos -->
     <div style="font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:1px; color:#9ca3af; margin: 10px 4px 4px;">Costos</div>
 
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; background:#fff5f5; border-radius:10px; margin-bottom:6px;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:separate; border-spacing:0; background:#fff5f5; border-radius:10px; margin-bottom:6px;">
       <tr>
         <td style="padding:12px 16px; font-size:14px; color:#6b7280;">
-          <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#eab308; margin-right:10px; vertical-align:middle;"></span>Cuota Pasarela
+          <span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#eab308; margin-right:10px; vertical-align:middle;"></span>Cuota Pasarela
         </td>
-        <td align="right" style="padding:12px 16px; font-size:15px; font-weight:600; color:#ef4444;">– ${{cuotapasarela}}</td>
+        <td align="right" style="padding:12px 16px; font-size:15px; font-weight:600; color:#ef4444;">– {{cuotapasarela}}</td>
       </tr>
     </table>
 
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; background:#fff5f5; border-radius:10px; margin-bottom:6px;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:separate; border-spacing:0; background:#fff5f5; border-radius:10px; margin-bottom:6px;">
       <tr>
         <td style="padding:12px 16px; font-size:14px; color:#6b7280;">
-          <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#facc15; margin-right:10px; vertical-align:middle;"></span>Seguro
+          <span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#facc15; margin-right:10px; vertical-align:middle;"></span>Seguro
         </td>
-        <td align="right" style="padding:12px 16px; font-size:15px; font-weight:600; color:#ef4444;">– ${{seguro}}</td>
+        <td align="right" style="padding:12px 16px; font-size:15px; font-weight:600; color:#ef4444;">– {{seguro}}</td>
       </tr>
     </table>
 
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; background:#fff5f5; border-radius:10px; margin-bottom:6px;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:separate; border-spacing:0; background:#fff5f5; border-radius:10px; margin-bottom:6px;">
       <tr>
         <td style="padding:12px 16px; font-size:14px; color:#6b7280;">
-          <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#dc2626; margin-right:10px; vertical-align:middle;"></span>Cargos
+          <span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#dc2626; margin-right:10px; vertical-align:middle;"></span>Cargos
         </td>
-        <td align="right" style="padding:12px 16px; font-size:15px; font-weight:600; color:#ef4444;">– ${{comisionpago}}</td>
+        <td align="right" style="padding:12px 16px; font-size:15px; font-weight:600; color:#ef4444;">– {{comisionpago}}</td>
       </tr>
     </table>
 
     <!-- Suma -->
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; background:#f0fdf4; border-radius:10px; margin-bottom:6px;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:separate; border-spacing:0; background:#f0fdf4; border-radius:10px; margin-bottom:6px;">
       <tr>
         <td style="padding:12px 16px; font-size:14px; color:#6b7280;">
-          <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#10b981; margin-right:10px; vertical-align:middle;"></span>Devoluciones
+          <span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#10b981; margin-right:10px; vertical-align:middle;"></span>Devoluciones
         </td>
-        <td align="right" style="padding:12px 16px; font-size:15px; font-weight:600; color:#059669;">+ ${{devoluciones}}</td>
+        <td align="right" style="padding:12px 16px; font-size:15px; font-weight:600; color:#059669;">+ {{devoluciones}}</td>
       </tr>
     </table>
 
     <!-- Resultado -->
     <div style="border-top: 1px dashed #e8ecf0; margin: 10px 0 12px;"></div>
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; background:linear-gradient(135deg,#eff6ff,#dbeafe); border:1px solid #bfdbfe; border-radius:10px; margin-top:0;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:separate; border-spacing:0; background:linear-gradient(135deg,#eff6ff,#dbeafe); border:1px solid #bfdbfe; border-radius:10px; margin-top:0;">
       <tr>
         <td style="padding:12px 16px; font-size:15px; font-weight:700; color:#1d4ed8;">
-          <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#2563eb; margin-right:10px; vertical-align:middle;"></span>= Depósito Comercio
+          <span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#2563eb; margin-right:10px; vertical-align:middle;"></span>= Depósito Comercio
         </td>
-        <td align="right" style="padding:12px 16px; font-size:20px; font-weight:700; color:#2563eb;">${{montodeposito}}</td>
+        <td align="right" style="padding:12px 16px; font-size:20px; font-weight:700; color:#2563eb;">{{montodeposito}}</td>
       </tr>
     </table>
 
@@ -650,7 +631,7 @@
     <div class="section-label">Ventas por día</div>
     <div style="text-align:right; margin-bottom:12px; margin-top:-8px;">
       <div style="font-size:10px; color:#9ca3af; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:2px;">Total</div>
-      <div style="font-size:18px; font-weight:700; color:#1a1a2e;">${{subtotal}}</div>
+      <div style="font-size:18px; font-weight:700; color:#1a1a2e;">{{subtotal}}</div>
     </div>
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:separate; border-spacing:0 10px;">
       <tr>
@@ -662,7 +643,7 @@
             </table>
           </div>
         </td>
-        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">${{ventalunes}}</td>
+        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">{{ventalunes}}</td>
       </tr>
       <tr>
         <td style="width:72px; font-size:13px; color:#6b7280;">Martes</td>
@@ -673,7 +654,7 @@
             </table>
           </div>
         </td>
-        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">${{ventamartes}}</td>
+        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">{{ventamartes}}</td>
       </tr>
       <tr>
         <td style="width:72px; font-size:13px; color:#6b7280;">Miércoles</td>
@@ -684,7 +665,7 @@
             </table>
           </div>
         </td>
-        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">${{ventamiercoles}}</td>
+        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">{{ventamiercoles}}</td>
       </tr>
       <tr>
         <td style="width:72px; font-size:13px; color:#6b7280;">Jueves</td>
@@ -695,7 +676,7 @@
             </table>
           </div>
         </td>
-        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">${{ventajueves}}</td>
+        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">{{ventajueves}}</td>
       </tr>
       <tr>
         <td colspan="3" style="background:#fff5f5; border-radius:10px; padding:6px 10px;">
@@ -709,7 +690,7 @@
                   </table>
                 </div>
               </td>
-              <td style="width:82px; text-align:right; font-size:13px; font-weight:700; color:#e8192c;">${{ventaviernes}}</td>
+              <td style="width:82px; text-align:right; font-size:13px; font-weight:700; color:#e8192c;">{{ventaviernes}}</td>
             </tr>
           </table>
         </td>
@@ -723,7 +704,7 @@
             </table>
           </div>
         </td>
-        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">${{ventasabado}}</td>
+        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">{{ventasabado}}</td>
       </tr>
       <tr>
         <td style="width:72px; font-size:13px; color:#6b7280;">Domingo</td>
@@ -734,7 +715,7 @@
             </table>
           </div>
         </td>
-        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">${{ventadomingo}}</td>
+        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">{{ventadomingo}}</td>
       </tr>
     </table>
   </div>
@@ -839,7 +820,7 @@
   <div class="cta-section">
     <div class="cta-title">¿Quieres ver el detalle completo?</div>
     <div class="cta-sub">Accede a tu panel para ver transacciones, reportes y más</div>
-    <a class="cta-button" href="https://partner.getagil.com/orders">Ir a mi cuenta</a>
+    <a class="cta-button" href="https://partner.getagil.com/orders" style="display:inline-block;background:#ffffff;color:#1a1a2e;font-size:14px;font-weight:600;padding:14px 36px;border-radius:12px;text-decoration:none;border:1px solid #e5e7eb;">Ir a mi cuenta</a>
   </div>
 
   <!-- FOOTER -->
@@ -853,12 +834,6 @@
       />
     </div>
     <div class="footer-text">¡Gracias por ser parte de la familia Ágil!</div>
-    <div class="footer-links">
-      <a href="{{urlAyuda}}">Ayuda</a>
-      <a href="{{urlMiCuenta}}">Mi cuenta</a>
-      <a href="{{urlContacto}}">Contacto</a>
-      <a href="{{urlCancelarSuscripcion}}">Cancelar suscripción</a>
-    </div>
   </div>
 
 </div>
