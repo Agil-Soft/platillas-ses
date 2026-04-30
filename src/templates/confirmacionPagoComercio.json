@@ -6,7 +6,7 @@
         "sucursal": "Qatir Las Condes",
         "periodo": "06/04/2026 al 12/04/2026",
         "montodeposito": "$1.914.624",
-        "crecimiento": "86,6%",
+        "crecimiento": "▲ +12,4%",
         "totalventas": 34,
         "ticketpromedio": "$69.438",
         "porcentajeAceptacion": "14,9%",
@@ -18,7 +18,7 @@
         "comisionpago": "$114.381",
         "devoluciones": "$15.000",
         "rutSucursal": "76.567.467-9",
-        "numeroDeposito": "ABN-2026-00128",
+        "numeroDeposito": "14103",
         "ventalunes": "$484.500",
         "ventamartes": "$258.350",
         "ventamiercoles": "$62.100",
@@ -32,6 +32,8 @@
         "cookingjueves": "29 min",
         "cookingviernes": "184 min",
         "cookingsabado": "44 min",
-        "cookingdomingo": "68 min"
+        "cookingdomingo": "68 min",
+        "diaMasVenta": "V",
+        "diaMasLento": "M"
     }
 }
