@@ -643,89 +643,48 @@
       <div style="font-size:18px; font-weight:700; color:#1a1a2e;">{{subtotal}}</div>
     </div>
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:separate; border-spacing:0 10px;">
-      <tr>
-        <td style="width:72px; font-size:13px; color:#6b7280;">Lunes</td>
-        <td style="padding:0 12px;">
-          <div style="background:#f3f4f6; border-radius:100px; height:8px; overflow:hidden;">
-            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">
-              <tr><td width="{{widthventalunes}}%" style="background:linear-gradient(90deg,#f87171,#e8192c);"></td><td></td></tr>
-            </table>
-          </div>
-        </td>
-        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">{{ventalunes}}</td>
-      </tr>
-      <tr>
-        <td style="width:72px; font-size:13px; color:#6b7280;">Martes</td>
-        <td style="padding:0 12px;">
-          <div style="background:#f3f4f6; border-radius:100px; height:8px; overflow:hidden;">
-            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">
-              <tr><td width="{{widthventamartes}}%" style="background:linear-gradient(90deg,#f87171,#e8192c);"></td><td></td></tr>
-            </table>
-          </div>
-        </td>
-        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">{{ventamartes}}</td>
-      </tr>
-      <tr>
-        <td style="width:72px; font-size:13px; color:#6b7280;">Miércoles</td>
-        <td style="padding:0 12px;">
-          <div style="background:#f3f4f6; border-radius:100px; height:8px; overflow:hidden;">
-            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">
-              <tr><td width="{{widthventamiercoles}}%" style="background:linear-gradient(90deg,#f87171,#e8192c);"></td><td></td></tr>
-            </table>
-          </div>
-        </td>
-        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">{{ventamiercoles}}</td>
-      </tr>
-      <tr>
-        <td style="width:72px; font-size:13px; color:#6b7280;">Jueves</td>
-        <td style="padding:0 12px;">
-          <div style="background:#f3f4f6; border-radius:100px; height:8px; overflow:hidden;">
-            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">
-              <tr><td width="{{widthventajueves}}%" style="background:linear-gradient(90deg,#f87171,#e8192c);"></td><td></td></tr>
-            </table>
-          </div>
-        </td>
-        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">{{ventajueves}}</td>
-      </tr>
-      <tr>
-        <td colspan="3" style="background:#fff5f5; border-radius:10px; padding:6px 10px;">
-          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
-            <tr>
-              <td style="width:72px; font-size:13px; color:#e8192c; font-weight:700;">Viernes ⭐</td>
-              <td style="padding:0 12px;">
-                <div style="background:#fecdd3; border-radius:100px; height:8px; overflow:hidden;">
-                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">
-                    <tr><td width="{{widthventaviernes}}%" style="background:linear-gradient(90deg,#e8192c,#9b0a1a);"></td><td></td></tr>
-                  </table>
-                </div>
-              </td>
-              <td style="width:82px; text-align:right; font-size:13px; font-weight:700; color:#e8192c;">{{ventaviernes}}</td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-      <tr>
-        <td style="width:72px; font-size:13px; color:#6b7280;">Sábado</td>
-        <td style="padding:0 12px;">
-          <div style="background:#f3f4f6; border-radius:100px; height:8px; overflow:hidden;">
-            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">
-              <tr><td width="{{widthventasabado}}%" style="background:linear-gradient(90deg,#f87171,#e8192c);"></td><td></td></tr>
-            </table>
-          </div>
-        </td>
-        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">{{ventasabado}}</td>
-      </tr>
-      <tr>
-        <td style="width:72px; font-size:13px; color:#6b7280;">Domingo</td>
-        <td style="padding:0 12px;">
-          <div style="background:#f3f4f6; border-radius:100px; height:8px; overflow:hidden;">
-            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">
-              <tr><td width="{{widthventadomingo}}%" style="background:linear-gradient(90deg,#f87171,#e8192c);"></td><td></td></tr>
-            </table>
-          </div>
-        </td>
-        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">{{ventadomingo}}</td>
-      </tr>
+      <!-- Lunes -->
+      {{#if isbestventalunes}}
+      <tr><td colspan="3" style="background:#fff5f5; border-radius:10px; padding:6px 10px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;"><tr><td style="width:72px; font-size:13px; color:#e8192c; font-weight:700;">Lunes ⭐</td><td style="padding:0 12px;"><div style="background:#fecdd3; border-radius:100px; height:8px; overflow:hidden;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">{{#if showventalunes}}<tr><td width="{{widthventalunes}}%" style="background:linear-gradient(90deg,#e8192c,#9b0a1a);"></td><td></td></tr>{{/if}}{{#unless showventalunes}}<tr><td></td></tr>{{/unless}}</table></div></td><td style="width:82px; text-align:right; font-size:13px; font-weight:700; color:#e8192c;">{{ventalunes}}</td></tr></table></td></tr>
+      {{else}}
+      <tr><td style="width:72px; font-size:13px; color:#6b7280;">Lunes</td><td style="padding:0 12px;"><div style="background:#f3f4f6; border-radius:100px; height:8px; overflow:hidden;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">{{#if showventalunes}}<tr><td width="{{widthventalunes}}%" style="background:linear-gradient(90deg,#f87171,#e8192c);"></td><td></td></tr>{{/if}}{{#unless showventalunes}}<tr><td></td></tr>{{/unless}}</table></div></td><td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">{{ventalunes}}</td></tr>
+      {{/if}}
+      <!-- Martes -->
+      {{#if isbestventamartes}}
+      <tr><td colspan="3" style="background:#fff5f5; border-radius:10px; padding:6px 10px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;"><tr><td style="width:72px; font-size:13px; color:#e8192c; font-weight:700;">Martes ⭐</td><td style="padding:0 12px;"><div style="background:#fecdd3; border-radius:100px; height:8px; overflow:hidden;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">{{#if showventamartes}}<tr><td width="{{widthventamartes}}%" style="background:linear-gradient(90deg,#e8192c,#9b0a1a);"></td><td></td></tr>{{/if}}{{#unless showventamartes}}<tr><td></td></tr>{{/unless}}</table></div></td><td style="width:82px; text-align:right; font-size:13px; font-weight:700; color:#e8192c;">{{ventamartes}}</td></tr></table></td></tr>
+      {{else}}
+      <tr><td style="width:72px; font-size:13px; color:#6b7280;">Martes</td><td style="padding:0 12px;"><div style="background:#f3f4f6; border-radius:100px; height:8px; overflow:hidden;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">{{#if showventamartes}}<tr><td width="{{widthventamartes}}%" style="background:linear-gradient(90deg,#f87171,#e8192c);"></td><td></td></tr>{{/if}}{{#unless showventamartes}}<tr><td></td></tr>{{/unless}}</table></div></td><td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">{{ventamartes}}</td></tr>
+      {{/if}}
+      <!-- Miércoles -->
+      {{#if isbestventamiercoles}}
+      <tr><td colspan="3" style="background:#fff5f5; border-radius:10px; padding:6px 10px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;"><tr><td style="width:72px; font-size:13px; color:#e8192c; font-weight:700;">Miércoles ⭐</td><td style="padding:0 12px;"><div style="background:#fecdd3; border-radius:100px; height:8px; overflow:hidden;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">{{#if showventamiercoles}}<tr><td width="{{widthventamiercoles}}%" style="background:linear-gradient(90deg,#e8192c,#9b0a1a);"></td><td></td></tr>{{/if}}{{#unless showventamiercoles}}<tr><td></td></tr>{{/unless}}</table></div></td><td style="width:82px; text-align:right; font-size:13px; font-weight:700; color:#e8192c;">{{ventamiercoles}}</td></tr></table></td></tr>
+      {{else}}
+      <tr><td style="width:72px; font-size:13px; color:#6b7280;">Miércoles</td><td style="padding:0 12px;"><div style="background:#f3f4f6; border-radius:100px; height:8px; overflow:hidden;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">{{#if showventamiercoles}}<tr><td width="{{widthventamiercoles}}%" style="background:linear-gradient(90deg,#f87171,#e8192c);"></td><td></td></tr>{{/if}}{{#unless showventamiercoles}}<tr><td></td></tr>{{/unless}}</table></div></td><td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">{{ventamiercoles}}</td></tr>
+      {{/if}}
+      <!-- Jueves -->
+      {{#if isbestventajueves}}
+      <tr><td colspan="3" style="background:#fff5f5; border-radius:10px; padding:6px 10px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;"><tr><td style="width:72px; font-size:13px; color:#e8192c; font-weight:700;">Jueves ⭐</td><td style="padding:0 12px;"><div style="background:#fecdd3; border-radius:100px; height:8px; overflow:hidden;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">{{#if showventajueves}}<tr><td width="{{widthventajueves}}%" style="background:linear-gradient(90deg,#e8192c,#9b0a1a);"></td><td></td></tr>{{/if}}{{#unless showventajueves}}<tr><td></td></tr>{{/unless}}</table></div></td><td style="width:82px; text-align:right; font-size:13px; font-weight:700; color:#e8192c;">{{ventajueves}}</td></tr></table></td></tr>
+      {{else}}
+      <tr><td style="width:72px; font-size:13px; color:#6b7280;">Jueves</td><td style="padding:0 12px;"><div style="background:#f3f4f6; border-radius:100px; height:8px; overflow:hidden;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">{{#if showventajueves}}<tr><td width="{{widthventajueves}}%" style="background:linear-gradient(90deg,#f87171,#e8192c);"></td><td></td></tr>{{/if}}{{#unless showventajueves}}<tr><td></td></tr>{{/unless}}</table></div></td><td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">{{ventajueves}}</td></tr>
+      {{/if}}
+      <!-- Viernes -->
+      {{#if isbestventaviernes}}
+      <tr><td colspan="3" style="background:#fff5f5; border-radius:10px; padding:6px 10px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;"><tr><td style="width:72px; font-size:13px; color:#e8192c; font-weight:700;">Viernes ⭐</td><td style="padding:0 12px;"><div style="background:#fecdd3; border-radius:100px; height:8px; overflow:hidden;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">{{#if showventaviernes}}<tr><td width="{{widthventaviernes}}%" style="background:linear-gradient(90deg,#e8192c,#9b0a1a);"></td><td></td></tr>{{/if}}{{#unless showventaviernes}}<tr><td></td></tr>{{/unless}}</table></div></td><td style="width:82px; text-align:right; font-size:13px; font-weight:700; color:#e8192c;">{{ventaviernes}}</td></tr></table></td></tr>
+      {{else}}
+      <tr><td style="width:72px; font-size:13px; color:#6b7280;">Viernes</td><td style="padding:0 12px;"><div style="background:#f3f4f6; border-radius:100px; height:8px; overflow:hidden;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">{{#if showventaviernes}}<tr><td width="{{widthventaviernes}}%" style="background:linear-gradient(90deg,#f87171,#e8192c);"></td><td></td></tr>{{/if}}{{#unless showventaviernes}}<tr><td></td></tr>{{/unless}}</table></div></td><td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">{{ventaviernes}}</td></tr>
+      {{/if}}
+      <!-- Sábado -->
+      {{#if isbestventasabado}}
+      <tr><td colspan="3" style="background:#fff5f5; border-radius:10px; padding:6px 10px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;"><tr><td style="width:72px; font-size:13px; color:#e8192c; font-weight:700;">Sábado ⭐</td><td style="padding:0 12px;"><div style="background:#fecdd3; border-radius:100px; height:8px; overflow:hidden;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">{{#if showventasabado}}<tr><td width="{{widthventasabado}}%" style="background:linear-gradient(90deg,#e8192c,#9b0a1a);"></td><td></td></tr>{{/if}}{{#unless showventasabado}}<tr><td></td></tr>{{/unless}}</table></div></td><td style="width:82px; text-align:right; font-size:13px; font-weight:700; color:#e8192c;">{{ventasabado}}</td></tr></table></td></tr>
+      {{else}}
+      <tr><td style="width:72px; font-size:13px; color:#6b7280;">Sábado</td><td style="padding:0 12px;"><div style="background:#f3f4f6; border-radius:100px; height:8px; overflow:hidden;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">{{#if showventasabado}}<tr><td width="{{widthventasabado}}%" style="background:linear-gradient(90deg,#f87171,#e8192c);"></td><td></td></tr>{{/if}}{{#unless showventasabado}}<tr><td></td></tr>{{/unless}}</table></div></td><td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">{{ventasabado}}</td></tr>
+      {{/if}}
+      <!-- Domingo -->
+      {{#if isbestventadomingo}}
+      <tr><td colspan="3" style="background:#fff5f5; border-radius:10px; padding:6px 10px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;"><tr><td style="width:72px; font-size:13px; color:#e8192c; font-weight:700;">Domingo ⭐</td><td style="padding:0 12px;"><div style="background:#fecdd3; border-radius:100px; height:8px; overflow:hidden;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">{{#if showventadomingo}}<tr><td width="{{widthventadomingo}}%" style="background:linear-gradient(90deg,#e8192c,#9b0a1a);"></td><td></td></tr>{{/if}}{{#unless showventadomingo}}<tr><td></td></tr>{{/unless}}</table></div></td><td style="width:82px; text-align:right; font-size:13px; font-weight:700; color:#e8192c;">{{ventadomingo}}</td></tr></table></td></tr>
+      {{else}}
+      <tr><td style="width:72px; font-size:13px; color:#6b7280;">Domingo</td><td style="padding:0 12px;"><div style="background:#f3f4f6; border-radius:100px; height:8px; overflow:hidden;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">{{#if showventadomingo}}<tr><td width="{{widthventadomingo}}%" style="background:linear-gradient(90deg,#f87171,#e8192c);"></td><td></td></tr>{{/if}}{{#unless showventadomingo}}<tr><td></td></tr>{{/unless}}</table></div></td><td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">{{ventadomingo}}</td></tr>
+      {{/if}}
     </table>
   </div>
 
@@ -733,89 +692,48 @@
   <div class="section-card">
     <div class="section-label">Cooking time por día</div>
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:separate; border-spacing:0 10px;">
-      <tr>
-        <td style="width:72px; font-size:13px; color:#6b7280;">Lunes</td>
-        <td style="padding:0 12px;">
-          <div style="background:#f3f4f6; border-radius:100px; height:8px; overflow:hidden;">
-            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">
-              <tr><td width="{{widthcookinglunes}}%" style="background:linear-gradient(90deg,#fbbf24,#f59e0b);"></td><td></td></tr>
-            </table>
-          </div>
-        </td>
-        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">{{cookinglunes}}</td>
-      </tr>
-      <tr>
-        <td style="width:72px; font-size:13px; color:#6b7280;">Martes</td>
-        <td style="padding:0 12px;">
-          <div style="background:#f3f4f6; border-radius:100px; height:8px; overflow:hidden;">
-            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">
-              <tr><td width="{{widthcookingmartes}}%" style="background:linear-gradient(90deg,#fbbf24,#f59e0b);"></td><td></td></tr>
-            </table>
-          </div>
-        </td>
-        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">{{cookingmartes}}</td>
-      </tr>
-      <tr>
-        <td style="width:72px; font-size:13px; color:#6b7280;">Miércoles</td>
-        <td style="padding:0 12px;">
-          <div style="background:#f3f4f6; border-radius:100px; height:8px; overflow:hidden;">
-            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">
-              <tr><td width="{{widthcookingmiercoles}}%" style="background:linear-gradient(90deg,#fbbf24,#f59e0b);"></td><td></td></tr>
-            </table>
-          </div>
-        </td>
-        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">{{cookingmiercoles}}</td>
-      </tr>
-      <tr>
-        <td style="width:72px; font-size:13px; color:#6b7280;">Jueves</td>
-        <td style="padding:0 12px;">
-          <div style="background:#f3f4f6; border-radius:100px; height:8px; overflow:hidden;">
-            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">
-              <tr><td width="{{widthcookingjueves}}%" style="background:linear-gradient(90deg,#fbbf24,#f59e0b);"></td><td></td></tr>
-            </table>
-          </div>
-        </td>
-        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">{{cookingjueves}}</td>
-      </tr>
-      <tr>
-        <td colspan="3" style="background:#fffbeb; border-radius:10px; padding:6px 10px;">
-          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
-            <tr>
-              <td style="width:72px; font-size:13px; color:#d97706; font-weight:700;">Viernes 🔥</td>
-              <td style="padding:0 12px;">
-                <div style="background:#fde68a; border-radius:100px; height:8px; overflow:hidden;">
-                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">
-                    <tr><td width="{{widthcookingviernes}}%" style="background:linear-gradient(90deg,#f59e0b,#b45309);"></td><td></td></tr>
-                  </table>
-                </div>
-              </td>
-              <td style="width:82px; text-align:right; font-size:13px; font-weight:700; color:#d97706;">{{cookingviernes}}</td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-      <tr>
-        <td style="width:72px; font-size:13px; color:#6b7280;">Sábado</td>
-        <td style="padding:0 12px;">
-          <div style="background:#f3f4f6; border-radius:100px; height:8px; overflow:hidden;">
-            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">
-              <tr><td width="{{widthcookingsabado}}%" style="background:linear-gradient(90deg,#fbbf24,#f59e0b);"></td><td></td></tr>
-            </table>
-          </div>
-        </td>
-        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">{{cookingsabado}}</td>
-      </tr>
-      <tr>
-        <td style="width:72px; font-size:13px; color:#6b7280;">Domingo</td>
-        <td style="padding:0 12px;">
-          <div style="background:#f3f4f6; border-radius:100px; height:8px; overflow:hidden;">
-            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">
-              <tr><td width="{{widthcookingdomingo}}%" style="background:linear-gradient(90deg,#fbbf24,#f59e0b);"></td><td></td></tr>
-            </table>
-          </div>
-        </td>
-        <td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#9ca3af;">{{cookingdomingo}}</td>
-      </tr>
+      <!-- Lunes -->
+      {{#if isslowestcookinglunes}}
+      <tr><td colspan="3" style="background:#fffbeb; border-radius:10px; padding:6px 10px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;"><tr><td style="width:72px; font-size:13px; color:#d97706; font-weight:700;">Lunes 🐢</td><td style="padding:0 12px;"><div style="background:#fde68a; border-radius:100px; height:8px; overflow:hidden;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">{{#if showcookinglunes}}<tr><td width="{{widthcookinglunes}}%" style="background:linear-gradient(90deg,#f59e0b,#b45309);"></td><td></td></tr>{{/if}}{{#unless showcookinglunes}}<tr><td></td></tr>{{/unless}}</table></div></td><td style="width:82px; text-align:right; font-size:13px; font-weight:700; color:#d97706;">{{cookinglunes}}</td></tr></table></td></tr>
+      {{else}}
+      <tr><td style="width:72px; font-size:13px; color:#6b7280;">Lunes</td><td style="padding:0 12px;"><div style="background:#f3f4f6; border-radius:100px; height:8px; overflow:hidden;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">{{#if showcookinglunes}}<tr><td width="{{widthcookinglunes}}%" style="background:linear-gradient(90deg,#fbbf24,#f59e0b);"></td><td></td></tr>{{/if}}{{#unless showcookinglunes}}<tr><td></td></tr>{{/unless}}</table></div></td><td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">{{cookinglunes}}</td></tr>
+      {{/if}}
+      <!-- Martes -->
+      {{#if isslowestcookingmartes}}
+      <tr><td colspan="3" style="background:#fffbeb; border-radius:10px; padding:6px 10px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;"><tr><td style="width:72px; font-size:13px; color:#d97706; font-weight:700;">Martes 🐢</td><td style="padding:0 12px;"><div style="background:#fde68a; border-radius:100px; height:8px; overflow:hidden;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">{{#if showcookingmartes}}<tr><td width="{{widthcookingmartes}}%" style="background:linear-gradient(90deg,#f59e0b,#b45309);"></td><td></td></tr>{{/if}}{{#unless showcookingmartes}}<tr><td></td></tr>{{/unless}}</table></div></td><td style="width:82px; text-align:right; font-size:13px; font-weight:700; color:#d97706;">{{cookingmartes}}</td></tr></table></td></tr>
+      {{else}}
+      <tr><td style="width:72px; font-size:13px; color:#6b7280;">Martes</td><td style="padding:0 12px;"><div style="background:#f3f4f6; border-radius:100px; height:8px; overflow:hidden;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">{{#if showcookingmartes}}<tr><td width="{{widthcookingmartes}}%" style="background:linear-gradient(90deg,#fbbf24,#f59e0b);"></td><td></td></tr>{{/if}}{{#unless showcookingmartes}}<tr><td></td></tr>{{/unless}}</table></div></td><td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">{{cookingmartes}}</td></tr>
+      {{/if}}
+      <!-- Miércoles -->
+      {{#if isslowestcookingmiercoles}}
+      <tr><td colspan="3" style="background:#fffbeb; border-radius:10px; padding:6px 10px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;"><tr><td style="width:72px; font-size:13px; color:#d97706; font-weight:700;">Miércoles 🐢</td><td style="padding:0 12px;"><div style="background:#fde68a; border-radius:100px; height:8px; overflow:hidden;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">{{#if showcookingmiercoles}}<tr><td width="{{widthcookingmiercoles}}%" style="background:linear-gradient(90deg,#f59e0b,#b45309);"></td><td></td></tr>{{/if}}{{#unless showcookingmiercoles}}<tr><td></td></tr>{{/unless}}</table></div></td><td style="width:82px; text-align:right; font-size:13px; font-weight:700; color:#d97706;">{{cookingmiercoles}}</td></tr></table></td></tr>
+      {{else}}
+      <tr><td style="width:72px; font-size:13px; color:#6b7280;">Miércoles</td><td style="padding:0 12px;"><div style="background:#f3f4f6; border-radius:100px; height:8px; overflow:hidden;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">{{#if showcookingmiercoles}}<tr><td width="{{widthcookingmiercoles}}%" style="background:linear-gradient(90deg,#fbbf24,#f59e0b);"></td><td></td></tr>{{/if}}{{#unless showcookingmiercoles}}<tr><td></td></tr>{{/unless}}</table></div></td><td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">{{cookingmiercoles}}</td></tr>
+      {{/if}}
+      <!-- Jueves -->
+      {{#if isslowestcookingjueves}}
+      <tr><td colspan="3" style="background:#fffbeb; border-radius:10px; padding:6px 10px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;"><tr><td style="width:72px; font-size:13px; color:#d97706; font-weight:700;">Jueves 🐢</td><td style="padding:0 12px;"><div style="background:#fde68a; border-radius:100px; height:8px; overflow:hidden;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">{{#if showcookingjueves}}<tr><td width="{{widthcookingjueves}}%" style="background:linear-gradient(90deg,#f59e0b,#b45309);"></td><td></td></tr>{{/if}}{{#unless showcookingjueves}}<tr><td></td></tr>{{/unless}}</table></div></td><td style="width:82px; text-align:right; font-size:13px; font-weight:700; color:#d97706;">{{cookingjueves}}</td></tr></table></td></tr>
+      {{else}}
+      <tr><td style="width:72px; font-size:13px; color:#6b7280;">Jueves</td><td style="padding:0 12px;"><div style="background:#f3f4f6; border-radius:100px; height:8px; overflow:hidden;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">{{#if showcookingjueves}}<tr><td width="{{widthcookingjueves}}%" style="background:linear-gradient(90deg,#fbbf24,#f59e0b);"></td><td></td></tr>{{/if}}{{#unless showcookingjueves}}<tr><td></td></tr>{{/unless}}</table></div></td><td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">{{cookingjueves}}</td></tr>
+      {{/if}}
+      <!-- Viernes -->
+      {{#if isslowestcookingviernes}}
+      <tr><td colspan="3" style="background:#fffbeb; border-radius:10px; padding:6px 10px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;"><tr><td style="width:72px; font-size:13px; color:#d97706; font-weight:700;">Viernes 🐢</td><td style="padding:0 12px;"><div style="background:#fde68a; border-radius:100px; height:8px; overflow:hidden;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">{{#if showcookingviernes}}<tr><td width="{{widthcookingviernes}}%" style="background:linear-gradient(90deg,#f59e0b,#b45309);"></td><td></td></tr>{{/if}}{{#unless showcookingviernes}}<tr><td></td></tr>{{/unless}}</table></div></td><td style="width:82px; text-align:right; font-size:13px; font-weight:700; color:#d97706;">{{cookingviernes}}</td></tr></table></td></tr>
+      {{else}}
+      <tr><td style="width:72px; font-size:13px; color:#6b7280;">Viernes</td><td style="padding:0 12px;"><div style="background:#f3f4f6; border-radius:100px; height:8px; overflow:hidden;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">{{#if showcookingviernes}}<tr><td width="{{widthcookingviernes}}%" style="background:linear-gradient(90deg,#fbbf24,#f59e0b);"></td><td></td></tr>{{/if}}{{#unless showcookingviernes}}<tr><td></td></tr>{{/unless}}</table></div></td><td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">{{cookingviernes}}</td></tr>
+      {{/if}}
+      <!-- Sábado -->
+      {{#if isslowestcookingsabado}}
+      <tr><td colspan="3" style="background:#fffbeb; border-radius:10px; padding:6px 10px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;"><tr><td style="width:72px; font-size:13px; color:#d97706; font-weight:700;">Sábado 🐢</td><td style="padding:0 12px;"><div style="background:#fde68a; border-radius:100px; height:8px; overflow:hidden;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">{{#if showcookingsabado}}<tr><td width="{{widthcookingsabado}}%" style="background:linear-gradient(90deg,#f59e0b,#b45309);"></td><td></td></tr>{{/if}}{{#unless showcookingsabado}}<tr><td></td></tr>{{/unless}}</table></div></td><td style="width:82px; text-align:right; font-size:13px; font-weight:700; color:#d97706;">{{cookingsabado}}</td></tr></table></td></tr>
+      {{else}}
+      <tr><td style="width:72px; font-size:13px; color:#6b7280;">Sábado</td><td style="padding:0 12px;"><div style="background:#f3f4f6; border-radius:100px; height:8px; overflow:hidden;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">{{#if showcookingsabado}}<tr><td width="{{widthcookingsabado}}%" style="background:linear-gradient(90deg,#fbbf24,#f59e0b);"></td><td></td></tr>{{/if}}{{#unless showcookingsabado}}<tr><td></td></tr>{{/unless}}</table></div></td><td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#374151;">{{cookingsabado}}</td></tr>
+      {{/if}}
+      <!-- Domingo -->
+      {{#if isslowestcookingdomingo}}
+      <tr><td colspan="3" style="background:#fffbeb; border-radius:10px; padding:6px 10px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;"><tr><td style="width:72px; font-size:13px; color:#d97706; font-weight:700;">Domingo 🐢</td><td style="padding:0 12px;"><div style="background:#fde68a; border-radius:100px; height:8px; overflow:hidden;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">{{#if showcookingdomingo}}<tr><td width="{{widthcookingdomingo}}%" style="background:linear-gradient(90deg,#f59e0b,#b45309);"></td><td></td></tr>{{/if}}{{#unless showcookingdomingo}}<tr><td></td></tr>{{/unless}}</table></div></td><td style="width:82px; text-align:right; font-size:13px; font-weight:700; color:#d97706;">{{cookingdomingo}}</td></tr></table></td></tr>
+      {{else}}
+      <tr><td style="width:72px; font-size:13px; color:#6b7280;">Domingo</td><td style="padding:0 12px;"><div style="background:#f3f4f6; border-radius:100px; height:8px; overflow:hidden;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse; height:8px;">{{#if showcookingdomingo}}<tr><td width="{{widthcookingdomingo}}%" style="background:linear-gradient(90deg,#fbbf24,#f59e0b);"></td><td></td></tr>{{/if}}{{#unless showcookingdomingo}}<tr><td></td></tr>{{/unless}}</table></div></td><td style="width:82px; text-align:right; font-size:13px; font-weight:600; color:#9ca3af;">{{cookingdomingo}}</td></tr>
+      {{/if}}
     </table>
 
     <p style="font-size:12px; color:#9ca3af; text-align:center; margin-top:14px;">
@@ -843,6 +761,7 @@
       />
     </div>
     <div class="footer-text">¡Gracias por ser parte de la familia Ágil!</div>
+    <div style="font-size:9px; color:#d1d5db; text-align:center; margin-top:8px;">v 1.0</div>
   </div>
 
 </div>
