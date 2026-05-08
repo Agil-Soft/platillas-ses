@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "sync": "node ./src/operations/sync.js",
+    "sync:confirmacion-pago-comercio": "bash ./scripts/sync-confirmacion-pago-comercio.sh",
     "send": "node ./src/operations/test.js",
     "delete": "node ./src/operations/delete.js"
   },
